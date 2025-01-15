@@ -4,39 +4,76 @@
   <meta charset="UTF-8" />
   <title>Fog/Frost Checker</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <!-- Link to our manifest for PWA features -->
+
+  <!-- BOOTSTRAP 5 CSS (CDN) -->
+  <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
+    rel="stylesheet"
+  >
+
+  <!-- Manifest & icons (if you're using a PWA) -->
+  <!--
   <link rel="manifest" href="manifest.json" />
-  
-  <!-- iOS home screen icon (optional but recommended) -->
   <link rel="apple-touch-icon" href="icon-192.png" />
-  
+  -->
+
+  <!-- Your custom styles (optional) -->
   <style>
     body {
-      font-family: sans-serif;
-      margin: 20px;
+      background-color: #f8f9fa; /* Light grey */
+    }
+    .frost-title {
+      margin: 20px 0;
       text-align: center;
     }
-    #result {
-      margin-top: 20px;
-      font-weight: bold;
-      font-size: 1.2em;
+    .card {
+      max-width: 500px;
+      margin: 0 auto;
     }
   </style>
 </head>
 <body>
 
-  <h1>Will My Windshield Fog or Frost?</h1>
+  <div class="container py-5">
+    <h1 class="frost-title">Will My Windshield Fog or Frost?</h1>
 
-  <p>
-    <label for="locationInput">Enter City or Zip Code:</label>
-    <input type="text" id="locationInput" />
-    <button id="checkWeather">Check Weather</button>
-  </p>
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <!-- Input row -->
+        <div class="mb-3">
+          <label for="locationInput" class="form-label">Enter City or ZIP Code:</label>
+          <input 
+            type="text" 
+            class="form-control" 
+            id="locationInput" 
+            placeholder="e.g. New York or 10001"
+          >
+        </div>
 
-  <div id="result"></div>
+        <!-- Button row -->
+        <div class="d-grid">
+          <button 
+            id="checkWeather" 
+            class="btn btn-primary btn-lg"
+          >
+            Check Weather
+          </button>
+        </div>
 
-  <!-- Link to our main JavaScript code -->
+        <!-- Results -->
+        <div class="mt-4 alert alert-info text-center" id="result" style="display: none;">
+          <!-- The result from script.js will appear here -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOOTSTRAP 5 JS BUNDLE (CDN) -->
+  <script 
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+  </script>
+
+  <!-- Your weather logic script (make sure API key is in there) -->
   <script src="script.js"></script>
 </body>
 </html>
