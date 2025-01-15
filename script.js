@@ -1,5 +1,5 @@
 // Replace with your real API key from WeatherAPI.com
-const API_KEY = "YOUR_WEATHERAPI_KEY_HERE";
+const API_KEY = 628d0506b1a74ac3a7d24459251501;
 
 document.getElementById('checkWeather').addEventListener('click', async () => {
   const location = document.getElementById('locationInput').value.trim();
