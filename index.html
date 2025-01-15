@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Fog/Frost Checker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Link to our manifest for PWA features -->
+  <link rel="manifest" href="manifest.json" />
+  
+  <!-- iOS home screen icon (optional but recommended) -->
+  <link rel="apple-touch-icon" href="icon-192.png" />
+  
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+      text-align: center;
+    }
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Will My Windshield Fog or Frost?</h1>
+
+  <p>
+    <label for="locationInput">Enter City or Zip Code:</label>
+    <input type="text" id="locationInput" />
+    <button id="checkWeather">Check Weather</button>
+  </p>
+
+  <div id="result"></div>
+
+  <!-- Link to our main JavaScript code -->
+  <script src="script.js"></script>
+</body>
+</html>
